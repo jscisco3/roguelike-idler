@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://cexx4jpr8td0y"]
+
+[ext_resource type="Script" uid="uid://csy6mv4420fwr" path="res://scenes/Main.cs" id="1_elqb8"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_elqb8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 49.0
+grow_horizontal = 2
+
+[node name="Gold" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="GoldLabel" type="Label" parent="VBoxContainer/Gold"]
+layout_mode = 2
+text = "Gold: "
+vertical_alignment = 1
+
+[node name="GoldAmount" type="Label" parent="VBoxContainer/Gold"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 8
+text = "0"
+
+[node name="Commands" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Explore" type="Button" parent="VBoxContainer/Commands"]
+layout_mode = 2
+text = "Explore"
