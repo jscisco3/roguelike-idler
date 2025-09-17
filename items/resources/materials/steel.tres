@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Material" load_steps=2 format=3 uid="uid://rqb77cimwcmd"]
+
+[ext_resource type="Script" uid="uid://bvsjjuj6usadd" path="res://items/scripts/Material.cs" id="1_xsawb"]
+
+[resource]
+script = ExtResource("1_xsawb")
+MaterialType = 200
+ValueMultiplier = 2.5

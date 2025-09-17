@@ -6,7 +6,7 @@
 [sub_resource type="Resource" id="Resource_34sln"]
 script = ExtResource("1_2wtam")
 MaxHealth = 10
-Power = 2
+Power = 3
 Defense = 1
 metadata/_custom_type_script = "uid://c4twu8m3qis3l"
 

@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Material" load_steps=2 format=3 uid="uid://dk0j71n8qb8d0"]
 
-[ext_resource type="Script" uid="uid://dcjjb3g3bu84b" path="res://items/scripts/Material.cs" id="1_tswpa"]
+[ext_resource type="Script" uid="uid://bvsjjuj6usadd" path="res://items/scripts/Material.cs" id="1_tswpa"]
 
 [resource]
 script = ExtResource("1_tswpa")
-MaterialType = 0
-ValueMultiplier = 0.0
+MaterialType = 100
+ValueMultiplier = 1.0
