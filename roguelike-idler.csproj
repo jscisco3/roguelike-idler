@@ -4,4 +4,7 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>roguelikeidler</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="items\scripts\" />
+  </ItemGroup>
 </Project>
