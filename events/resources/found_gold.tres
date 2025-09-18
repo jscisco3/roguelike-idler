@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Event" load_steps=2 format=3 uid="uid://uos3m0m011h1"]
+
+[ext_resource type="Script" uid="uid://bif2svoncik6g" path="res://events/definitions/Event.cs" id="1_dporv"]
+
+[resource]
+script = ExtResource("1_dporv")
+Message = "You found some gold!"
+GoldGainedOrLost = 34
+CrystalsGainedOrLost = 0

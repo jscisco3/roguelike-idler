@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dl18jfuok7xt"]
+
+[ext_resource type="Script" uid="uid://d0f3jjiq8q8gr" path="res://events/definitions/EventTable.cs" id="1_0cr4i"]
+[ext_resource type="Resource" uid="uid://uos3m0m011h1" path="res://events/resources/found_gold.tres" id="1_4qu0d"]
+
+[resource]
+script = ExtResource("1_0cr4i")
+EventTableData = Dictionary[Object, int]({
+ExtResource("1_4qu0d"): 10
+})
