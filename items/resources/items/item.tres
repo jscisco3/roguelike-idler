@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dk3f75fyk64b1"]
 
-[ext_resource type="Script" uid="uid://dlc0mcbyqf7cj" path="res://items/scripts/WeaponStats.cs" id="1_23v7a"]
-[ext_resource type="Script" uid="uid://dqb32qy3ri8gm" path="res://items/scripts/Item.cs" id="2_l3ev6"]
+[ext_resource type="Script" uid="uid://derwytumhb8jt" path="res://items/scripts/WeaponStats.cs" id="1_23v7a"]
+[ext_resource type="Script" uid="uid://b28qp2s34lugp" path="res://items/scripts/Item.cs" id="2_l3ev6"]
 
 [sub_resource type="Resource" id="Resource_6c6q6"]
 script = ExtResource("1_23v7a")
@@ -14,4 +14,3 @@ Name = ""
 Description = ""
 BaseValue = 0.0
 WeaponStats = SubResource("Resource_6c6q6")
-metadata/_custom_type_script = "uid://dqb32qy3ri8gm"
