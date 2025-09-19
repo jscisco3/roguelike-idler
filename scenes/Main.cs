@@ -1,4 +1,6 @@
+using System.Linq;
 using Godot;
+using roguelikeidler.events.definitions;
 using roguelikeidler.player;
 
 namespace roguelikeidler.scenes
@@ -14,6 +16,9 @@ namespace roguelikeidler.scenes
 		// Exported so it can be set in the explorer for now
 		[Export] private Player _player;
 
+		// TODO: Handle this differently at some point.
+		[Export] private EventTable _eventTable;
+		
 		public override void _Ready()
 		{
 			// Append this method to the Pressed actions?
@@ -27,6 +32,14 @@ namespace roguelikeidler.scenes
 		{
 			_player.GainGold(10);
 			_player.GainCrystals(1);
+			for (var i = 0; i < 10; i++)
+			{
+				var e = _eventTable.RollEvent();
+				if (e == null) continue;
+				_player.GainGold(e.GoldGainedOrLost);
+				_player.GainCrystals(e.CrystalsGainedOrLost);
+				GD.Print($"{e.Message}");
+			}
 		}
 
 		private void HandleGoldChanged(int newValue)

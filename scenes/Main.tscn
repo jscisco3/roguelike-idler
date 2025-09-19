@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cexx4jpr8td0y"]
+[gd_scene load_steps=4 format=3 uid="uid://cexx4jpr8td0y"]
 
 [ext_resource type="Script" uid="uid://csy6mv4420fwr" path="res://scenes/Main.cs" id="1_elqb8"]
+[ext_resource type="Resource" uid="uid://dl18jfuok7xt" path="res://events/resources/generic_event_table.tres" id="2_0bbpv"]
 [ext_resource type="PackedScene" uid="uid://bv76uyybrghdf" path="res://player/Player.tscn" id="2_rvslj"]
 
 [node name="Controller" type="Control" node_paths=PackedStringArray("_exploreButton", "_goldAmountLabel", "_crystalAmountLabel", "_player")]
@@ -15,6 +16,7 @@ _exploreButton = NodePath("MarginContainer/VBoxContainer/Commands/Explore")
 _goldAmountLabel = NodePath("MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Gold/GoldAmount")
 _crystalAmountLabel = NodePath("MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Crystals/CrystalAmount")
 _player = NodePath("Player")
+_eventTable = ExtResource("2_0bbpv")
 
 [node name="Player" parent="." instance=ExtResource("2_rvslj")]
 

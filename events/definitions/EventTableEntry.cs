@@ -5,6 +5,7 @@ using System;
 namespace roguelikeidler.events.definitions
 {
  
+    [GlobalClass]
     public partial class EventTableEntry : Resource
     {
         [Export]
