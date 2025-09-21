@@ -1,7 +1,7 @@
 using System;
 using Godot;
 
-namespace roguelikeidler.entities.scripts
+namespace roguelikeidler.entities
 {
     [GlobalClass]
     public partial class Entity : Resource

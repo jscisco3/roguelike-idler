@@ -1,6 +1,6 @@
 using Godot;
 
-namespace roguelikeidler.entities.scripts 
+namespace roguelikeidler.entities 
 {
     
     [GlobalClass]

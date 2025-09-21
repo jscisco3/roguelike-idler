@@ -1,15 +1,13 @@
 using Godot;
-using System;
 
-
-namespace roguelikeidler.events.definitions
+namespace roguelikeidler.events
 {
  
     [GlobalClass]
     public partial class EventTableEntry : Resource
     {
         [Export]
-        public Event Event { get; set; }
+        public events.Event Event { get; set; }
         
         [Export]
         public int Weight { get; set; }

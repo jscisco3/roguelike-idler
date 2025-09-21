@@ -3,8 +3,9 @@ using System.Linq;
 using Godot;
 using Godot.Collections;
 
-namespace roguelikeidler.events.definitions
+namespace roguelikeidler.events
 {
+    [GlobalClass]
     public partial class EventTable : Resource
     {
         [Export] public Array<EventTableEntry> EventTableData { get; set; }
@@ -32,7 +33,7 @@ namespace roguelikeidler.events.definitions
                     return entry.Event;
                 }
             }
-            
+
 
             GD.PrintErr($"No event found after rolling {roll}");
             return null;
