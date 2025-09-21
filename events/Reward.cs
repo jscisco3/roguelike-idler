@@ -6,7 +6,9 @@ namespace roguelikeidler.events
     [GlobalClass]
     public partial class Reward: Resource
     {
+        [Export]
         public int Gold = 0;
+        [Export]
         public int Crystals = 0;
         // public Array<Item> items = [];
 

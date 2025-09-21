@@ -37,8 +37,8 @@ namespace roguelikeidler.scenes
             {
                 var e = _eventTable.RollEvent();
                 if (e == null) continue;
-                _player.GainGold(e.GoldGainedOrLost);
-                _player.GainCrystals(e.CrystalsGainedOrLost);
+                _player.Gold += e.Reward.Gold;
+                _player.Crystals += e.Reward.Crystals;
                 _messageLog.AddMessage(e.Message);
             }
         }

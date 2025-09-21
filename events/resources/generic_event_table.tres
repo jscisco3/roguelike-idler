@@ -1,9 +1,10 @@
-[gd_resource type="Resource" load_steps=7 format=3 uid="uid://dl18jfuok7xt"]
+[gd_resource type="Resource" script_class="EventTable" load_steps=9 format=3 uid="uid://dl18jfuok7xt"]
 
 [ext_resource type="Script" uid="uid://5l6sagqajxdj" path="res://events/EventTable.cs" id="1_0cr4i"]
 [ext_resource type="Resource" uid="uid://dfpigscvg07if" path="res://events/resources/found_crystals.tres" id="1_2g4k5"]
 [ext_resource type="Script" uid="uid://dxitslueymxbl" path="res://events/EventTableEntry.cs" id="2_14viy"]
 [ext_resource type="Resource" uid="uid://uos3m0m011h1" path="res://events/resources/found_gold.tres" id="3_14viy"]
+[ext_resource type="Resource" uid="uid://blqflifg175u7" path="res://events/resources/lost_resources.tres" id="4_35yih"]
 
 [sub_resource type="Resource" id="Resource_35yih"]
 script = ExtResource("2_14viy")
@@ -17,6 +18,12 @@ Event = ExtResource("3_14viy")
 Weight = 10
 metadata/_custom_type_script = "uid://dxitslueymxbl"
 
+[sub_resource type="Resource" id="Resource_rf7dq"]
+script = ExtResource("2_14viy")
+Event = ExtResource("4_35yih")
+Weight = 2
+metadata/_custom_type_script = "uid://dxitslueymxbl"
+
 [resource]
 script = ExtResource("1_0cr4i")
-EventTableData = Array[Object]([SubResource("Resource_35yih"), SubResource("Resource_rtaoq")])
+EventTableData = Array[Object]([SubResource("Resource_35yih"), SubResource("Resource_rtaoq"), SubResource("Resource_rf7dq")])

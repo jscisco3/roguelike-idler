@@ -13,6 +13,11 @@ namespace roguelikeidler.player
             set
             {
                 _gold = value;
+                if (_gold <= 0)
+                {
+                    _gold = 0;
+                }
+
                 EmitSignal(SignalName.GoldChanged, Gold);
             }
         }
@@ -25,6 +30,11 @@ namespace roguelikeidler.player
             set
             {
                 _crystals = value;
+                if (_crystals <= 0)
+                {
+                    _crystals = 0;
+                }
+
                 EmitSignal(SignalName.CrystalsChanged, Crystals);
             }
         }
