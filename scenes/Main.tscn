@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cexx4jpr8td0y"]
+[gd_scene load_steps=5 format=3 uid="uid://cexx4jpr8td0y"]
 
 [ext_resource type="Script" uid="uid://csy6mv4420fwr" path="res://scenes/Main.cs" id="1_elqb8"]
 [ext_resource type="Resource" uid="uid://dl18jfuok7xt" path="res://events/resources/generic_event_table.tres" id="2_0bbpv"]
 [ext_resource type="PackedScene" uid="uid://bv76uyybrghdf" path="res://player/Player.tscn" id="2_rvslj"]
+[ext_resource type="PackedScene" uid="uid://dg4eca5l7gywm" path="res://scenes/MessageLog.tscn" id="4_rarhs"]
 
-[node name="Controller" type="Control" node_paths=PackedStringArray("_exploreButton", "_goldAmountLabel", "_crystalAmountLabel", "_player")]
+[node name="Controller" type="Control" node_paths=PackedStringArray("_exploreButton", "_goldAmountLabel", "_crystalAmountLabel", "_player", "_messageLog")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,6 +17,7 @@ _exploreButton = NodePath("MarginContainer/VBoxContainer/Commands/Explore")
 _goldAmountLabel = NodePath("MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Gold/GoldAmount")
 _crystalAmountLabel = NodePath("MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Crystals/CrystalAmount")
 _player = NodePath("Player")
+_messageLog = NodePath("MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/MessageLog")
 _eventTable = ExtResource("2_0bbpv")
 
 [node name="Player" parent="." instance=ExtResource("2_rvslj")]
@@ -80,14 +82,19 @@ size_flags_horizontal = 2
 size_flags_vertical = 8
 text = "0"
 
-[node name="MessageLog" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 0
+
+[node name="MessageLog" parent="MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer" instance=ExtResource("4_rarhs")]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Commands" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 10
+size_flags_vertical = 8
 
 [node name="Explore" type="Button" parent="MarginContainer/VBoxContainer/Commands"]
 layout_mode = 2

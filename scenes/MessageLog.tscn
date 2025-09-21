@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg4eca5l7gywm"]
+
+[ext_resource type="Script" uid="uid://bnu0nfe3nueum" path="res://scenes/MessageLog.cs" id="1_0eboy"]
+
+[node name="MessageLog" type="VBoxContainer"]
+script = ExtResource("1_0eboy")

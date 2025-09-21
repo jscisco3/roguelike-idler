@@ -16,6 +16,8 @@ namespace roguelikeidler.scenes
 		// Exported so it can be set in the explorer for now
 		[Export] private Player _player;
 
+		[Export] private MessageLog _messageLog;
+
 		// TODO: Handle this differently at some point.
 		[Export] private EventTable _eventTable;
 		
@@ -38,7 +40,7 @@ namespace roguelikeidler.scenes
 				if (e == null) continue;
 				_player.GainGold(e.GoldGainedOrLost);
 				_player.GainCrystals(e.CrystalsGainedOrLost);
-				GD.Print($"{e.Message}");
+				_messageLog.AddMessage(e.Message);
 			}
 		}
 
