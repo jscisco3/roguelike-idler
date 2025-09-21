@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Entity" load_steps=4 format=3 uid="uid://2yexutdviinj"]
 
-[ext_resource type="Script" uid="uid://bii07fde6lqr7" path="res://entities/scripts/Entity.cs" id="1_0pkka"]
-[ext_resource type="Script" uid="uid://c4twu8m3qis3l" path="res://entities/scripts/EntityStats.cs" id="1_2wtam"]
+[ext_resource type="Script" uid="uid://cswa6o77tdwyk" path="res://entities/Entity.cs" id="1_0pkka"]
+[ext_resource type="Script" uid="uid://def4pjecm8uh" path="res://entities/EntityStats.cs" id="1_2wtam"]
 
 [sub_resource type="Resource" id="Resource_34sln"]
 script = ExtResource("1_2wtam")
@@ -14,4 +14,3 @@ metadata/_custom_type_script = "uid://c4twu8m3qis3l"
 script = ExtResource("1_0pkka")
 Name = ""
 Stats = SubResource("Resource_34sln")
-metadata/_custom_type_script = "uid://bii07fde6lqr7"

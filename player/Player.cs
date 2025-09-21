@@ -1,10 +1,16 @@
 using Godot;
 using System;
+using Godot.Collections;
+using roguelikeidler.entities;
 
 namespace roguelikeidler.player
 {
     public partial class Player : Node
     {
+        
+        [Export]
+        public Array<Entity> Heroes { get; set; }
+        
         private int _gold;
 
         public int Gold

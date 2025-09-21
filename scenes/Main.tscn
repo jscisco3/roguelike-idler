@@ -1,9 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://cexx4jpr8td0y"]
+[gd_scene load_steps=12 format=3 uid="uid://cexx4jpr8td0y"]
 
 [ext_resource type="Script" uid="uid://csy6mv4420fwr" path="res://scenes/Main.cs" id="1_elqb8"]
 [ext_resource type="Resource" uid="uid://dl18jfuok7xt" path="res://events/resources/generic_event_table.tres" id="2_0bbpv"]
 [ext_resource type="PackedScene" uid="uid://bv76uyybrghdf" path="res://player/Player.tscn" id="2_rvslj"]
+[ext_resource type="Script" uid="uid://def4pjecm8uh" path="res://entities/EntityStats.cs" id="4_c01mt"]
+[ext_resource type="Resource" uid="uid://ba5ontofedp5u" path="res://items/resources/items/axe.tres" id="4_jlsqs"]
+[ext_resource type="Script" uid="uid://b6yrc30wchby0" path="res://entities/Equipment.cs" id="4_nxtc6"]
 [ext_resource type="PackedScene" uid="uid://dg4eca5l7gywm" path="res://scenes/MessageLog.tscn" id="4_rarhs"]
+[ext_resource type="Script" uid="uid://cswa6o77tdwyk" path="res://entities/Entity.cs" id="4_vcsgt"]
+
+[sub_resource type="Resource" id="Resource_jlsqs"]
+script = ExtResource("4_nxtc6")
+Weapon = ExtResource("4_jlsqs")
+metadata/_custom_type_script = "uid://b6yrc30wchby0"
+
+[sub_resource type="Resource" id="Resource_nxtc6"]
+script = ExtResource("4_c01mt")
+MaxHealth = 100
+Power = 10
+Defense = 5
+metadata/_custom_type_script = "uid://def4pjecm8uh"
+
+[sub_resource type="Resource" id="Resource_c01mt"]
+script = ExtResource("4_vcsgt")
+Name = "Jotar"
+Stats = SubResource("Resource_nxtc6")
+Equipment = SubResource("Resource_jlsqs")
+metadata/_custom_type_script = "uid://cswa6o77tdwyk"
 
 [node name="Controller" type="Control" node_paths=PackedStringArray("_exploreButton", "_goldAmountLabel", "_crystalAmountLabel", "_player", "_messageLog")]
 layout_mode = 3
@@ -21,6 +44,7 @@ _messageLog = NodePath("MarginContainer/VBoxContainer/HBoxContainer/ScrollContai
 _eventTable = ExtResource("2_0bbpv")
 
 [node name="Player" parent="." instance=ExtResource("2_rvslj")]
+Heroes = Array[Object]([SubResource("Resource_c01mt")])
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1

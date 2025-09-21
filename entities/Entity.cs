@@ -8,6 +8,8 @@ namespace roguelikeidler.entities
     {
         [Export] public String Name { get; set; }
         [Export] public EntityStats Stats { get; set; }
+        
+        [Export] public Equipment Equipment { get; set; }
 
         public Entity()
         {

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://ba5ontofedp5u"]
+
+[ext_resource type="Script" uid="uid://b28qp2s34lugp" path="res://items/scripts/Item.cs" id="1_hvyvf"]
+[ext_resource type="Resource" uid="uid://dk0j71n8qb8d0" path="res://items/resources/materials/iron.tres" id="1_v2b8e"]
+[ext_resource type="Script" uid="uid://derwytumhb8jt" path="res://items/scripts/WeaponStats.cs" id="2_5i10s"]
+
+[sub_resource type="Resource" id="Resource_kyujd"]
+script = ExtResource("2_5i10s")
+Damage = 12
+metadata/_custom_type_script = "uid://derwytumhb8jt"
+
+[resource]
+script = ExtResource("1_hvyvf")
+Name = "Battleaxe"
+Description = ""
+BaseValue = 17.0
+Material = ExtResource("1_v2b8e")
+WeaponStats = SubResource("Resource_kyujd")
+metadata/_custom_type_script = "uid://b28qp2s34lugp"

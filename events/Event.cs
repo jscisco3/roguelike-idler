@@ -1,5 +1,6 @@
 using System;
 using Godot;
+using roguelikeidler.entities;
 
 namespace roguelikeidler.events
 {
@@ -9,5 +10,8 @@ namespace roguelikeidler.events
         [Export] public String Message { get; set; }
 
         [Export] public Reward Reward;
+        
+        public void Resolve(Entity hero) {}
+
     }
 }

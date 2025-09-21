@@ -11,7 +11,7 @@ namespace roguelikeidler.items.scripts
         [Export] public String Description { get; set; }
 
         [Export] public float BaseValue { get; set; }
-        [Export] public scripts.Material Material { get; set; }
+        [Export] public Material Material { get; set; }
         [Export] public WeaponStats WeaponStats { get; set; }
 
         public float GetValue()
